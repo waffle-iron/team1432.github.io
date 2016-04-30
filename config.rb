@@ -1,0 +1,111 @@
+###
+# Page options, layouts, aliases and proxies
+###
+
+# Per-page layout changes:
+#
+# With no layout
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+activate :asset_hash
+activate :sprockets
+activate :directory_indexes
+activate :gzip
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+activate :syntax
+
+# With alternative layout
+# page "/path/to/file.html", layout: :otherlayout
+
+# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
+#  which_fake_page: "Rendering a fake page with a local variable" }
+
+###
+# Helpers
+###
+
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  # blog.prefix = "blog"
+  blog.layout = "article_layout"
+
+  blog.permalink = "/blog/{title}.html"
+  # Matcher for blog source files
+  blog.sources = "/posts/{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  # blog.layout = "layout"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
+end
+
+page "/feed.xml", layout: false
+# Reload the browser automatically whenever files change
+configure :development do
+  activate :livereload
+end
+
+# Methods defined in the helpers block are available in templates
+helpers do
+  def authors_of(article)
+    list = []
+    if article.data.author?
+      list.push article.data.author.split(' ')[0].downcase.strip
+    end
+    if article.data.authors?
+      article.data.authors.split(',').each do |author|
+        list.push author.split(' ')[0].downcase.strip
+      end
+    end
+    return list
+  end
+  def author_tag(author)
+    return\
+      "<a href='/authors/#{author}' class='author'>
+        #{image_tag '/images/authors/' + data.authors[author].photo}
+        #{data.authors[author].name}
+      </a>"
+  end
+  def article_card(article)
+    author_tags = ""
+    for author in authors_of article
+      author_tags += author_tag author
+    end
+    return\
+      "<div class='post'>
+        <h2 class='title'>#{article.title}</h2>
+        <div class='text'>
+          #{author_tags}
+          <p class='summary'>#{strip_tags article.summary}</p>
+          <div class='actions'>
+            #{link_to "Read more...", article, class: "flat button"}
+          </div>
+        </div>
+      </div>"
+  end
+end
+
+data.authors.each do |author, data|
+  proxy "/authors/#{author}/index.html", "author.html", locals: {author: data}, layout: 'layout', ignore: true
+end
+# Build-specific configuration
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :minify_html
+end

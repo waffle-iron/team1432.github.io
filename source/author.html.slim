@@ -1,0 +1,15 @@
+---
+layout: layout
+---
+img.profile src="/images/authors/#{author.photo}"
+h1.profile = author.name
+- if author.description?
+  section.about
+    h2
+      span About #{author.name.split(' ')[0]}
+    .about = author.description.gsub("\n", ' ').squeeze(' ')
+section.posts
+  h2
+    span Posts by #{author.name.split(' ')[0]}
+  - blog.articles.select{ |article| authors_of(article).include? author.name.split(' ')[0].downcase.strip }.each do |article|
+    = article_card(article)

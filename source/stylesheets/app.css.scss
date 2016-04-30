@@ -1,0 +1,99 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "sol/sol";
+$phone: new-breakpoint(max-width 480px, $total-columns: 4);
+$tablet: new-breakpoint(min-width 480px max-width 840px, $total-columns: 8);
+$desktop: new-breakpoint(min-width 840px, $total-columns: 12);
+body {
+  margin: 0;
+}
+header.page-header {
+  @extend %header;
+  background-color: $indigo-700;
+  a {
+    color: $white;
+    &.active, &:hover {
+      background-color: $indigo-500;
+    }
+  }
+}
+img.profile {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+}
+h1.profile {
+  text-align: center;
+}
+%section-header {
+  text-align: center;
+  span {
+    font-weight: normal;
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+}
+section.about>h2,  {
+  @extend %section-header;
+  span {
+    border-bottom: 2px solid red; 
+  }
+  & + .about {
+    @extend %card;
+    padding: 16px;
+  }
+}
+section.posts>h2 {
+  @extend %section-header;
+  span {
+    border-bottom: 2px solid green; 
+  }
+}
+
+.posts > .post {
+  @extend %card;
+}
+#{$all-buttons},
+a.button {
+  @extend %buttons;
+}
+.author,
+.tag {
+  @extend %chip;
+}
+input[type="search"] { @extend %search; }
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+  @extend %text-inputs;
+}
+.highlighter-rouge {
+  @extend %highlight;
+}
+footer {
+  @extend %footer;
+}
+@if $load-icons {
+  .icon {
+    @extend %icons;
+  }
+}
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,11 @@
+caleb:
+  name: Caleb Eby
+  photo: caleb.jpg
+  description: Caleb does programming, electronics, and driving for our robot.
+    He currently is a freshman at Franklin High School.
+cody:
+  name: Cody Hanks
+  photo: cody.jpg
+  description: Cody is our new Programming Mentor, a PSU grad in the IT field.
+    He's transitioning our team over the using Java as our programming language
+    and we're really looking forward to the change. 

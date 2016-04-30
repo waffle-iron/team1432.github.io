@@ -1,0 +1,17 @@
+---
+pageable: true
+per_page: 10
+--- 
+- if paginate && num_pages > 1
+  p
+    | Page #{page_number} of #{num_pages}
+  - if prev_page
+    p
+      = link_to 'Previous page', prev_page
+.posts
+  - page_articles.each do |article|
+    = article_card article
+- if paginate
+  - if next_page
+    p
+      = link_to 'Next page', next_page
