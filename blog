@@ -61,6 +61,18 @@ class MyCLI < Thor
   subcommand 'edit', Edit
   desc "new SUBCOMMAND", "Some Parent Command"
   subcommand "new", New
+  desc 'publish', 'uploads the code to GitHub, to the real website'
+  def publish
+    `git checkout source`
+    commit_message = ask 'What changes have you made to the website?'
+    `git add -A`
+    `git commit -am "#{commit_message}"`
+    `git pull origin source`
+    if yes? 'are you sure you want to publish these changes?'
+      `git push origin source`
+      `rake publish`
+    end
+  end
 end
 
 MyCLI.start(ARGV)
