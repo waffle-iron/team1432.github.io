@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+
+class Edit < Thor
+  include Thor::Actions
+  desc 'post', 'edits a post'
+  def post
+    #_posts = Dir['source/posts/*']
+    #for post in _posts
+    posts = []
+    Dir.entries('source/posts').select {|f| !File.directory? f}.each do |file|
+      posts.push file.sub('.html.markdown', '').gsub('-', ' ')
+    end
+    puts posts
+    name = ask 'What is the name of the post you would like to edit?', limited_to: posts
+    system "vim #{'source/posts/' + name.gsub(' ', '-') + '.html.markdown'}"
+  end
+end
+
+class New < Thor
+  include Thor::Actions
+  desc "post", "makes a new post"
+  def post
+    name = ask 'What is the name of the new post?'
+    clean_name = "source/posts/#{name.gsub(/[^0-9a-z ]/i, '').squeeze(' ').gsub(/\s/, '-').downcase}.html.markdown"
+    authors = []
+    getMoreAuthors = true
+    while getMoreAuthors
+      authors.push ask 'What is the name of the author?'
+      getMoreAuthors = yes? 'Is there another author?'
+    end
+    if authors.length == 1
+      author_string = "author: #{authors.first}"
+    else
+      author_string = "authors: #{authors.join(', ')}"
+    end
+    tags = []
+    if yes? 'does this post have any tags?'
+      getMoreTags = true
+      while getMoreTags
+        tags.push ask 'What is the tag?'
+        getMoreTags = yes? 'Is there another tag?'
+      end
+    end
+    create_file clean_name do
+"---
+title: #{name}
+date: #{Time.now}
+#{author_string}
+tags: #{tags.join(', ')}
+---"
+    end
+    system "vim #{clean_name}"
+  end
+end
+
+class MyCLI < Thor
+  include Thor::Actions
+  desc 'edit SUBCOMMAND', 'some parent command'
+  subcommand 'edit', Edit
+  desc "new SUBCOMMAND", "Some Parent Command"
+  subcommand "new", New
+end
+
+MyCLI.start(ARGV)

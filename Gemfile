@@ -18,6 +18,7 @@ gem "turbolinks", require: false
 gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "master"
 gem "middleman-syntax"
 gem "middleman-minify-html"
+gem 'middleman-gh-pages'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
