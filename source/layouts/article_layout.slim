@@ -5,27 +5,4 @@
   header
     time[pubdate itemprop="datePublished" datetime=rfc_date content=rfc_date] = clean_date
     h1[itemprop="name"] = current_article.title
-  section[itemprop="description"]
-    = current_article.summary
   = yield
-  aside
-    h2
-      | Recent Articles
-    ol
-      - blog.articles[0...10].each do |article|
-        li
-          = link_to article.title, article
-          span
-            = article.date.strftime('%b %e')
-    h2
-      | Tags
-    ol
-      - blog.tags.each do |tag, articles|
-        li
-          = link_to "#{tag} (#{articles.size})", tag_path(tag)
-    h2
-      | By Year
-    ol
-      - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-        li
-          = link_to "#{year} (#{articles.size})", blog_year_path(year)
