@@ -13,6 +13,15 @@
 # Ignore cache
 /.sass-cache
 /.cache
-*.swp
-# Ignore .DS_store file
+
+# Ignore .DS_Store file
 .DS_Store
+*.swp
+# Ignore packages installed by Node
+/node_modules
+
+# Ordinarily, I'd say we'd want to ignore packages installed by Bower, but I
+# don't think Jenkins is going to run `bower install` for us, so for now we
+# have to commit the Foundation vendor stuff into the repo.
+#
+# /bower_components
