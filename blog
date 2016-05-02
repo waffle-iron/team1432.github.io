@@ -14,7 +14,7 @@ class Edit < Thor
     end
     puts posts
     name = ask 'What is the name of the post you would like to edit?', limited_to: posts
-    system "vim #{'source/posts/' + name.gsub(' ', '-') + '.html.markdown'}"
+    system "gedit #{'source/posts/' + name.gsub(' ', '-') + '.html.markdown'}"
     if yes? 'Would you like to publish your post?'
       MyCLI.new.invoke :publish
     end
@@ -54,7 +54,7 @@ date: #{Time.now}
 tags: #{tags.join(', ')}
 ---"
     end
-    system "vim #{clean_name}"
+    system "gedit #{clean_name}"
     if yes? 'Would you like to publish your post?'
       MyCLI.new.invoke :publish
     end
