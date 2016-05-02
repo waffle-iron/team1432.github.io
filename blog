@@ -71,6 +71,7 @@ class MyCLI < Thor
   def publish
     `git checkout source`
     `git add -A`
+    #TODO: add created or deleted
     puts `git status | grep modified`
     commit_message = ask 'What changes have you made to the website?'
     `git commit -am "#{commit_message}"`
