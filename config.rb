@@ -1,7 +1,7 @@
 ###
 # Page options, layouts, aliases and proxies
 ###
-
+require 'rouge/plugins/redcarpet'
 # Per-page layout changes:
 #
 # With no layout
@@ -12,10 +12,68 @@ activate :asset_hash
 activate :sprockets
 activate :directory_indexes
 activate :gzip
+activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
+
+class CustomMarkdown < Redcarpet::Render::HTML
+  def initialize(options={
+      fenced_code_blocks: true,
+      smartypants: true,
+      tables: true,
+      autolink: true,
+      with_toc_data: true,
+      no_intra_emphasis: true,
+      strikethrough: true,
+      lax_spacing: true,
+      quote: true,
+      footnotes: true,
+      underline: true
+    })
+    super options.merge(
+      with_toc_data: true,
+    )
+  end
+  def preprocess(rendered_doc)
+    puts 'preprocess'
+    puts rendered_doc
+    markdowner = Redcarpet::Markdown.new(self, options = {
+      markdown: true,
+      fenced_code_blocks: true,
+      smartypants: true,
+      tables: true,
+      autolink: true,
+      with_toc_data: true,
+      no_intra_emphasis: true,
+      strikethrough: true,
+      lax_spacing: true,
+      quote: true,
+      footnotes: true,
+      underline: true
+    })
+    rendered_doc = custom_markdown(rendered_doc, markdowner)
+  end
+  def custom_markdown(document, renderer)
+    document.gsub(/(.*?)READMORE/) do
+      "<div class='summary'>#{$1}</div>"
+    end
+  end
+  include Rouge::Plugins::Redcarpet
+end
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
-activate :syntax
+set :markdown,
+  fenced_code_blocks: true,
+  smartypants: true,
+  tables: true,
+  autolink: true,
+  with_toc_data: true,
+  no_intra_emphasis: true,
+  strikethrough: true,
+  lax_spacing: true,
+  quote: true,
+  footnotes: true,
+  underline: true,
+  renderer: CustomMarkdown
+
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

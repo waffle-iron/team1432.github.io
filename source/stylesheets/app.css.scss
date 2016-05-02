@@ -81,7 +81,7 @@ input[type="week"],
 textarea {
   @extend %text-inputs;
 }
-.highlight {
+pre > code{
   @extend %highlight;
 }
 footer {
