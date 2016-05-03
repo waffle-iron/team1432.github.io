@@ -71,16 +71,15 @@ class MyCLI < Thor
   def publish
     `git checkout source | grep error`
     `git add -A | grep error`
-    puts `git status | grep 'deleted:'`
     puts `git status | grep 'new file:'`
     puts `git status | grep 'modified:'`
-    #puts `git status | grep 'modified:\|new file:\|deleted:'`
+    puts `git status | grep 'deleted:'`
     commit_message = ask 'What changes have you made to the website?'
     `git commit -am "#{commit_message}"`
     `git pull origin source`
     if yes? 'Are you sure you want to publish these changes?'
       `git push origin source`
-      `rake publish | grep 'error\|success'`
+      `rake publish -s`
     end
   end
 end
