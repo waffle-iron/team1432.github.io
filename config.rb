@@ -5,6 +5,7 @@ require 'rouge/plugins/redcarpet'
 # Per-page layout changes:
 #
 # With no layout
+Time.zone = 'Pacific Time (US & Canada)'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
@@ -33,8 +34,6 @@ class CustomMarkdown < Redcarpet::Render::HTML
     )
   end
   def preprocess(rendered_doc)
-    puts 'preprocess'
-    puts rendered_doc
     markdowner = Redcarpet::Markdown.new(self, options = {
       markdown: true,
       fenced_code_blocks: true,

@@ -1,8 +1,8 @@
 = wrap_layout :layout do
   - rfc_date = DateTime.parse(current_article.date.to_s).rfc3339.to_s
-  - clean_date = current_article.date.strftime("%B %e, %Y")
+  - clean_date = current_article.date.strftime("%B %e, %Y at %I:%M %p")
   article[itemscope itemtype="http://schema.org/BlogPosting"]
-  header
-    time[pubdate itemprop="datePublished" datetime=rfc_date content=rfc_date] = clean_date
-    h1[itemprop="name"] = current_article.title
-  = yield
+    header
+      time[pubdate itemprop="datePublished" datetime=rfc_date content=rfc_date] = clean_date
+      h1[itemprop="name"] = current_article.title
+    = yield
