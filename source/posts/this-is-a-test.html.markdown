@@ -4,7 +4,7 @@ date: 2016-04-23 17:41 UTC
 author: caleb e
 tags: something, other, test
 ---
-this is some text with formatting like **bold** and *italics* This is the really long summary with some text.
+this is some text with formatting like **bold** and *italics*
 
 READMORE
 
