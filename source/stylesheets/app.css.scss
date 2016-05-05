@@ -5,12 +5,6 @@ $color: green;
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "sol/sol";
-$phone: new-breakpoint(max-width 480px, $total-columns: 4);
-$tablet: new-breakpoint(min-width 480px max-width 840px, $total-columns: 8);
-$desktop: new-breakpoint(min-width 840px, $total-columns: 12);
-body {
-  margin: 0;
-}
 header.page-header {
   @extend %header;
   background-color: $indigo-700;
@@ -59,8 +53,17 @@ section.posts>h2 {
 
 .posts > .post {
   @extend %card;
+  margin: 0 0 30px;
+  .title {
+    @extend %title;
+  }
+  .text {
+    @extend %text;
+  }
+  a.button {
+    color: $black-87;
+  }
 }
-//#{$all-buttons},
 a.button {
   @extend %buttons;
 }
@@ -87,9 +90,6 @@ textarea {
 }
 pre > code{
   @extend %highlight;
-}
-footer {
-  @extend %footer;
 }
 @if $load-icons {
   .icon {
