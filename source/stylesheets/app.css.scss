@@ -1,20 +1,13 @@
+
 $load-icons: false;
-$load-roboto: false;
-$roboto: "Roboto+Mono|Roboto:400,500";
+$load-roboto: true;
+$roboto: "Roboto+Mono|Roboto";
 $color: green;
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "sol/sol";
-header.page-header {
-  @extend %header;
-  background-color: $indigo-700;
-  a {
-    color: $white;
-    &.active, &:hover {
-      background-color: $indigo-500;
-    }
-  }
-}
+
+//////// Author ////////
 img.profile {
   border-radius: 50%;
   height: 100px;
@@ -28,6 +21,7 @@ h1.profile {
 }
 %section-header {
   text-align: center;
+  margin-top: 20px;
   span {
     font-weight: normal;
     font-size: 20px;
@@ -41,7 +35,7 @@ section.about>h2,  {
   }
   & + .about {
     @extend %card;
-    padding: 16px;
+    p { @extend %text }
   }
 }
 section.posts>h2 {
@@ -50,54 +44,54 @@ section.posts>h2 {
     border-bottom: 2px solid green; 
   }
 }
+////////// COMMON //////////
 
-.posts > .post {
-  @extend %card;
-  margin: 0 0 30px;
-  .title {
-    @extend %title;
-  }
-  .text {
-    @extend %text;
-  }
-  a.button {
-    color: $black-87;
+a {
+  color: $light-blue-600;
+}
+header.page-header {
+  @extend %header;
+  background-color: $indigo-700;
+  a {
+    color: $white;
+    &.active, &:hover {
+      background-color: $indigo-500;
+    }
   }
 }
+
 a.button {
-  @extend %buttons;
+  @extend %button;
 }
-.author,
-.tag {
-  @extend %chip;
-}
-//input[type="search"] { @extend %search; }
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-textarea {
-  //@extend %text-inputs;
-}
-pre > code{
-  @extend %highlight;
-}
-@if $load-icons {
-  .icon {
-    @extend %icons;
-  }
-}
+
 main {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
+
+///////// ARTICLE //////////
+pre > code{
+  @extend %highlight;
+}
+
+////////// POSTS ///////////
+.posts > .post {
+  @extend %card;
+  margin: 15px 0;
+  .title {
+    @extend %title;
+  }
+  .summary {
+    @extend %text;
+  }
+  .author {
+    @extend %action, %chip;
+  }
+  .readmore {
+    @extend %action;
+    color: $black-87;
+  }
+}
+
+

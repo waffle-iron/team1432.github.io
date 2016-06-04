@@ -146,13 +146,9 @@ helpers do
     return\
       "<div class='post'>
         <h2 class='title'>#{article.title}</h2>
-        <div class='text'>
-          #{author_tags}
-          <p class='summary'>#{strip_tags article.summary}</p>
-          <div class='actions'>
-            #{link_to "Read more...", article, class: "flat button"}
-          </div>
-        </div>
+        #{author_tags}
+        <p class='summary'>#{strip_tags article.summary}</p>
+        #{link_to "Read more...", article, class: "flat button readmore"}
       </div>"
   end
 end
