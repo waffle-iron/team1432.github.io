@@ -1,0 +1,12 @@
+---
+title: 123 abc
+date: 2016-06-08 16:47:55 -0700
+author: Caleb
+tags: 
+---
+
+This is a new post
+
+READMORE
+
+Here is some **formatted** content
