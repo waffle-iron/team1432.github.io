@@ -14,7 +14,6 @@ gem "middleman-blog"
 gem "slim"
 gem "middleman-livereload", "~> 3.4.3"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
-gem "turbolinks", require: false
 gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "master"
 gem "middleman-syntax"
 gem "middleman-minify-html"
