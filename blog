@@ -80,6 +80,7 @@ class MyCLI < Thor
     if yes? 'Are you sure you want to publish these changes?'
       `git push origin source`
       `rake publish -s`
+      `wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null`
     end
   end
 end
