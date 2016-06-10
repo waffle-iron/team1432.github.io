@@ -2,6 +2,9 @@
 
 require 'thor'
 
+def edit(file)
+  system "gedit #{file}" or system %{cmd /c "notepad #{file}"}
+end
 class Edit < Thor
   include Thor::Actions
   desc 'post', 'edits a post'
@@ -14,7 +17,7 @@ class Edit < Thor
     end
     puts posts
     name = ask 'What is the name of the post you would like to edit?', limited_to: posts
-    system "gedit #{'source/posts/' + name.gsub(' ', '-') + '.html.markdown'}"
+    edit 'source/posts/' + name.gsub(' ', '-') + '.html.markdown'
     if yes? 'Would you like to publish your post?'
       MyCLI.new.invoke :publish
     end
@@ -54,7 +57,7 @@ date: #{Time.now}
 tags: #{tags.join(', ')}
 ---"
     end
-    system "gedit #{clean_name}"
+    edit clean_name
     if yes? 'Would you like to publish your post?'
       MyCLI.new.invoke :publish
     end
