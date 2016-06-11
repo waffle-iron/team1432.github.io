@@ -90,4 +90,4 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 #echo $ git push $SSH_REPO $TARGET_BRANCH
 #git push $SSH_REPO $TARGET_BRANCH
 echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
-git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
