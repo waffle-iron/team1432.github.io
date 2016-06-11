@@ -20,7 +20,7 @@ task :travis do
   system "git remote set-url --push origin #{repo}"
   system "git remote set-branches --add origin #{deploy_branch}"
   system 'git fetch -q'
-  system "git config user.name '#{ENV['COMMIT_AUTHOR_NAME']}'"
+  system "git config user.name 'ALIEN FROM MARS'"
   system "git config user.email '#{ENV['COMMIT_AUTHOR_EMAIL']}'"
   system 'git config credential.helper "store --file=.git/credentials"'
   File.open('.git/credentials', 'w') do |f|
@@ -29,7 +29,6 @@ task :travis do
   print 'building'
   system 'bundle exec middleman build'
   print 'here\'s git\'s config:'
-  print ENV['COMMIT_AUTHOR_EMAIL']
   system 'git config user.name'
   system 'git config user.email'
   print 'commiting'
