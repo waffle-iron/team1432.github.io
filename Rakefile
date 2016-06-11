@@ -29,6 +29,8 @@ task :travis do
   print 'building'
   system 'bundle exec middleman build'
   print 'commiting'
+  puts '$ mv build ../'
+  system 'mv build ../'
   system 'git commit -am "travis built"'
   puts '$ pwd'
   system 'pwd'
