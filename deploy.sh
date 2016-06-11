@@ -20,7 +20,7 @@ function doCompile {
   git branch
   echo 'branching'
   git pull
-  git checkout $TARGET_BRANCH
+  git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
   echo 'branch:'
   git branch
   echo '$ rm -rf *'
