@@ -81,12 +81,13 @@ echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
-ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
-ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+#ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+#ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+#ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+#ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 
 # Now that we're all set up, we can push.
-echo $ git push $SSH_REPO $TARGET_BRANCH
-git push $SSH_REPO $TARGET_BRANCH
+#echo $ git push $SSH_REPO $TARGET_BRANCH
+#git push $SSH_REPO $TARGET_BRANCH
+echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
