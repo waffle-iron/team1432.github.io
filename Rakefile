@@ -29,7 +29,7 @@ task :travis do
   print 'building'
   system 'bundle exec middleman build'
   print 'here\'s git\'s config:'
-  print ENV['GIT_NAME']
+  print ENV['COMMIT_AUTHOR_EMAIL']
   system 'git config user.name'
   system 'git config user.email'
   print 'commiting'
