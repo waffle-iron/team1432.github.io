@@ -17,7 +17,7 @@ function doCompile {
   pwd
   echo 'listing branches'
   git branch
-  print 'branching'
+  echo 'branching'
   git branch $TARGET_BRANCH origin/$TARGET_BRANCH
   git checkout master
   echo 'branch:'
