@@ -6,7 +6,7 @@ TARGET_BRANCH="master"
 BUILD_DIR=build
 
 function doCompile {
-  bundle exec middleman build && echo "Hello from planet Earth (actually the aliens at travis)"
+  bundle exec middleman build --verbose && echo "Hello from planet Earth (actually the aliens at travis)"
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -26,6 +26,7 @@ SHA=`git rev-parse --verify HEAD`
 git clone $REPO $BUILD_DIR
 cd $BUILD_DIR
 pwd
+ls
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
