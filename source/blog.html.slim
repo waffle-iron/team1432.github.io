@@ -3,47 +3,13 @@ pageable: true
 per_page: 10
 --- 
 
-//form action="https://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=team1432', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style=("border:1px solid #ccc;padding:3px;text-align:center;") target="popupwindow" 
+form action="https://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=team1432', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style=("border:1px solid #ccc;padding:3px;text-align:center;") target="popupwindow" 
   p Enter your email address:
   p
     input name="email" style="width:140px" type="text" /
   input name="uri" type="hidden" value="team1432" /
   input name="loc" type="hidden" value="en_US" /
   input type="submit" value="Subscribe" /
-link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" /
-css:
-  #mc_embed_signup background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  
-  /!* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-     | We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-#mc_embed_signup
-  form#mc-embedded-subscribe-form.validate action="//github.us10.list-manage.com/subscribe/post?u=a1c0432089ae9a1a26149efbf&id=a96c3b195a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" 
-    #mc_embed_signup_scroll
-      h2 Subscribe to our mailing list
-      .indicates-required
-        span.asterisk *
-        | indicates required
-      .mc-field-group
-        label for="mce-EMAIL" 
-          | Email Address
-          span.asterisk *
-        input#mce-EMAIL.required.email name="EMAIL" type="email" value="" /
-      .mc-field-group
-        label for="mce-FNAME"  First Name
-        input#mce-FNAME name="FNAME" type="text" value="" /
-      .mc-field-group
-        label for="mce-LNAME"  Last Name
-        input#mce-LNAME name="LNAME" type="text" value="" /
-      #mce-responses.clear
-        #mce-error-response.response style="display:none" 
-        #mce-success-response.response style="display:none" 
-      /! real people should not fill this in and expect good things - do not remove this or risk form bot signups
-      div aria-hidden="true" style=("position: absolute; left: -5000px;") 
-        input name="b_a1c0432089ae9a1a26149efbf_a96c3b195a" tabindex="-1" type="text" value="" /
-      .clear
-        input#mc-embedded-subscribe.button name="subscribe" type="submit" value="Subscribe" /
-script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript" 
-javascript:
-  | (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
 
 - if paginate && num_pages > 1
   p
