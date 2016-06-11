@@ -15,7 +15,7 @@ function doCompile {
   #git commit -am "travis built"
   echo '$ pwd'
   pwd
-  print 'listing branches'
+  echo 'listing branches'
   git branch
   print 'branching'
   git branch $TARGET_BRANCH origin/$TARGET_BRANCH
