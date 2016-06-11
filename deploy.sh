@@ -5,7 +5,7 @@ SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
 
 function doCompile {
-  bundle exec middleman build
+  bundle exec middleman build && echo "Hello from planet Earth (actually the aliens at travis)"
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
