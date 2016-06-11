@@ -1,6 +1,7 @@
 language: ruby
 rvm:
   - 2.3.1
+cache: bundler
 script: bash ./deploy.sh
 env:
   global:
