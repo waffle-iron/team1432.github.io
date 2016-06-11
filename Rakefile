@@ -30,6 +30,8 @@ task :travis do
   system 'bundle exec middleman build'
   print 'commiting'
   system 'git commit -am "travis built"'
+  puts '$ pwd'
+  system 'pwd'
   print 'listing branches'
   system 'git branch'
   print 'branching'
