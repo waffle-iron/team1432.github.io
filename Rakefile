@@ -26,11 +26,12 @@ task :travis do
   File.open('.git/credentials', 'w') do |f|
     f.write("https://#{ENV['GH_TOKEN']}:x-oauth-basic@github.com")
   end
+  system 'git pull origin source'
   print 'building'
   system 'bundle exec middleman build'
-  print 'commiting'
   puts '$ mv build ../'
   system 'mv build ../'
+  puts 'commiting'
   system 'git commit -am "travis built"'
   puts '$ pwd'
   system 'pwd'
