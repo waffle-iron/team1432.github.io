@@ -13,7 +13,7 @@ task :travis do
   end
 
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
-  deploy_branch = 'gh-pages'
+  deploy_branch = 'master'
   if repo.match(/github\.com\.git$/)
     deploy_branch = 'master'
   end
@@ -28,9 +28,6 @@ task :travis do
   end
   print 'building'
   system 'bundle exec middleman build'
-  print 'here\'s git\'s config:'
-  system 'git config user.name'
-  system 'git config user.email'
   print 'commiting'
   system 'git commit -am "travis built"'
   print 'listing branches'
