@@ -5,7 +5,7 @@ SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
 
 function doCompile {
-  middleman build
+  bundle install && middleman build
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
