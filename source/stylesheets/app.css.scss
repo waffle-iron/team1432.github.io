@@ -2,10 +2,16 @@
 $load-icons: false;
 $load-roboto: true;
 $roboto: "Roboto+Mono|Roboto";
-$color: green;
+$beaver-blue: #293D6E;
+$beaver-gold: #B59137;
+$color: $beaver-blue;
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "sol/sol";
+
+$phone: new-breakpoint(max-width 480px, $total-columns: 4);
+$tablet: new-breakpoint(min-width 480px max-width 840px, $total-columns: 8);
+$desktop: new-breakpoint(min-width 840px, $total-columns: 12);
 
 //////// Author ////////
 img.profile {
@@ -21,6 +27,7 @@ h1.profile {
 }
 %section-header {
   text-align: center;
+  margin-bottom: 20px;
   margin-top: 20px;
   span {
     font-weight: normal;
@@ -38,7 +45,7 @@ section.about>h2,  {
     p { @extend %text }
   }
 }
-section.posts>h2 {
+section.posts-by>h2 {
   @extend %section-header;
   span {
     border-bottom: 2px solid green; 
@@ -46,22 +53,31 @@ section.posts>h2 {
 }
 ////////// COMMON //////////
 
+body {
+  background-color: $grey-100;
+}
+main {
+  margin-top: 20px;
+}
 a {
   color: $light-blue-600;
 }
 header.page-header {
   @extend %header;
-  background-color: $indigo-700;
+  background-color: $beaver-blue;
   a {
     color: $white;
     &.active, &:hover {
-      background-color: $indigo-500;
+      //background-color: lighten($beaver-blue, 10%);
+      background-color: $beaver-gold;
     }
   }
 }
 
-a.button {
+a.button, input[type='submit'] {
   @extend %button;
+  color: black;
+  background-color: white;
 }
 
 main {
@@ -76,6 +92,11 @@ pre > code{
 }
 
 ////////// POSTS ///////////
+.posts {
+  @include media($desktop) {
+    @include span-columns(8);
+  }
+}
 .posts > .post {
   @extend %card;
   margin: 15px 0;
@@ -93,5 +114,25 @@ pre > code{
     color: $black-87;
   }
 }
-
-
+.subscribe {
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+  @extend %card;
+  margin: 15px 0 0;
+  .title {
+    @extend %title;
+  }
+  form {
+    @extend %text;
+  }
+  input[type='email'] {
+    @extend %text-inputs;
+    width: 100%;
+  }
+  input[type='submit'] {
+    background-color: $beaver-gold;
+    width: 100%;
+    color: white;
+  }
+}
