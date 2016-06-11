@@ -18,7 +18,7 @@ function doCompile {
   echo 'listing branches'
   git branch
   echo 'branching'
-  git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
+  git checkout -t $TARGET_BRANCH origin/$TARGET_BRANCH
   echo 'branch:'
   git branch
   echo '$ rm -rf *'
