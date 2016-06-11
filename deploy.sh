@@ -30,8 +30,8 @@ function doCompile {
   echo '$ git add -A && git commit -am "add build"' 
   git add -A && git commit -am "add build"
   
-  echo '$ git push origin source'
-  git push origin source
+  #echo '$ git push origin master'
+  #git push origin master
 
 }
 
