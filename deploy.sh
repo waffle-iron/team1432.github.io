@@ -6,8 +6,9 @@ TARGET_BRANCH="master"
 
 function doCompile {
   echo ENV['GH_TOKEN']
-  git pull origin source
+  git pull
   echo 'building'
+  git checkout -b $SOURCE_BRANCH origin/$SOURCE_BRANCH
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
@@ -19,7 +20,7 @@ function doCompile {
   git branch
   echo 'branching'
   git pull
-  git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
+  git checkout $TARGET_BRANCH
   echo 'branch:'
   git branch
   echo '$ rm -rf *'
