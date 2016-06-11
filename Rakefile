@@ -28,6 +28,8 @@ task :travis do
   end
   print 'building'
   system 'bundle exec middleman build'
+  print 'here\'s git\'s config:'
+  system 'cat .git/credentials'
   print 'commiting'
   system 'git commit -am "travis built"'
   print 'listing branches'
