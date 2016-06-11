@@ -73,7 +73,6 @@ set :markdown,
   underline: true,
   renderer: CustomMarkdown
 
-
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -162,3 +161,4 @@ configure :build do
   activate :minify_javascript
   activate :minify_html
 end
+

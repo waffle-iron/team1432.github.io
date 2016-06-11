@@ -6,7 +6,7 @@ TARGET_BRANCH="master"
 BUILD_DIR=build
 
 function doCompile {
-  bundle exec middleman build --verbose && echo "Hello from planet Earth (actually the aliens at travis)"
+  bundle exec rake publish && echo "Hello from planet Earth (actually the aliens at travis)"
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -27,11 +27,11 @@ git clone $REPO $BUILD_DIR
 cd $BUILD_DIR
 pwd
 ls
-git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-cd ..
+git checkout $SOURCE_BRANCH || git checkout --orphan $SOURCE_BRANCH
+#cd ..
 
 # Clean out existing contents
-rm -rf $BUILD_DIR/**/* || exit 0
+#rm -rf $BUILD_DIR/**/* || exit 0
 
 # Run our compile script
 doCompile
