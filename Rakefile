@@ -46,5 +46,7 @@ task :travis do
   system 'git branch'
   puts '$ mv ../build .'
   system 'mv ../build .'
+  puts '$ ls -a'
+  system 'ls -a'
   File.delete '.git/credentials'
 end
