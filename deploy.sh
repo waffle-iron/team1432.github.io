@@ -8,7 +8,7 @@ function doCompile {
   echo ENV['GH_TOKEN']
   git pull
   echo 'building'
-  git checkout -b $SOURCE_BRANCH origin/$SOURCE_BRANCH
+  git checkout $SOURCE_BRANCH
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
