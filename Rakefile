@@ -44,9 +44,17 @@ task :travis do
   system 'git checkout master'
   puts 'branch:'
   system 'git branch'
-  puts '$ mv ../build .'
-  system 'mv ../build .'
+  puts '$ rm -rf *'
+  system 'rm -rf *'
+  puts '$ mv ../build/* .'
+  system 'mv ../build/* .'
   puts '$ ls -a'
   system 'ls -a'
+  puts '$ git add -A && git commit -am "add build"' 
+  system 'git add -A && git commit -am "add build"'
+  
+  puts '$ git push origin source'
+  system 'git push origin source'
+
   File.delete '.git/credentials'
 end
