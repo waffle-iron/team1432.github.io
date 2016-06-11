@@ -29,8 +29,8 @@ function doCompile {
   mv ../build/* .
   echo '$ ls -a'
   ls -a
-  echo '$ git add -A && git commit -am "add build"' 
-  git add -A && git commit -am "add build"
+  #echo '$ git add -A && git commit -am "add build"' 
+  #git add -A && git commit -am "add build"
   
   #echo '$ git push origin master'
   #git push origin master
