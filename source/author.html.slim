@@ -9,8 +9,12 @@ h1.profile = author.name
       span About #{author.name.split(' ')[0]}
     .about
       p = author.description.gsub("\n", ' ').squeeze(' ')
-section.posts
+section.posts-by
   h2
     span Posts by #{author.name.split(' ')[0]}
-  - blog.articles.select{ |article| authors_of(article).include? author.name.split(' ')[0].downcase.strip }.each do |article|
-    = article_card(article)
+  .posts
+    - blog.articles.select{ |article| authors_of(article).include? author.name.split(' ')[0].downcase.strip }.each do |article|
+      = article_card(article)
+
+  = partial :subscribe
+

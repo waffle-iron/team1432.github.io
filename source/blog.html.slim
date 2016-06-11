@@ -3,14 +3,6 @@ pageable: true
 per_page: 10
 --- 
 
-form action="https://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=team1432', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style=("border:1px solid #ccc;padding:3px;text-align:center;") target="popupwindow" 
-  p Enter your email address:
-  p
-    input name="email" style="width:140px" type="text" /
-  input name="uri" type="hidden" value="team1432" /
-  input name="loc" type="hidden" value="en_US" /
-  input type="submit" value="Subscribe" /
-
 - if paginate && num_pages > 1
   p
     | Page #{page_number} of #{num_pages}
@@ -24,3 +16,6 @@ form action="https://feedburner.google.com/fb/a/mailverify" method="post" onsubm
   - if next_page
     p
       = link_to 'Next page', next_page
+
+= partial :subscribe
+
