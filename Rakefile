@@ -26,9 +26,13 @@ task :travis do
   File.open('.git/credentials', 'w') do |f|
     f.write("https://#{ENV['GH_TOKEN']}:x-oauth-basic@github.com")
   end
+  print 'building'
   system 'bundle exec middleman build'
+  print 'commiting'
   system 'git commit -am "travis built"'
+  print 'listing branches'
   system 'git branch'
+  print 'branching'
   system "git branch #{deploy_branch} origin/#{deploy_branch}"
   File.delete '.git/credentials'
 end
