@@ -28,7 +28,7 @@ task :travis do
   end
   system 'bundle exec middleman build'
   system 'git commit -am "travis built"'
-  git branch
+  system 'git branch'
   system "git branch #{deploy_branch} origin/#{deploy_branch}"
   File.delete '.git/credentials'
 end
