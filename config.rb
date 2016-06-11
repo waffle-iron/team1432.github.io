@@ -12,7 +12,7 @@ page '/*.txt', layout: false
 activate :asset_hash
 activate :sprockets
 activate :directory_indexes
-activate :gzip
+#activate :gzip
 activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
 
 class CustomMarkdown < Redcarpet::Render::HTML
