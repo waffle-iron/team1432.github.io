@@ -3,6 +3,7 @@ rvm:
   - 2.3.1
 cache: bundler
 script: bash deploy.sh
+before-install: rvm list
 env:
   global:
     - ENCRYPTION_LABEL: "347d35156aa9"
