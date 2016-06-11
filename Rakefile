@@ -41,6 +41,7 @@ task :travis do
   system 'git branch'
   print 'branching'
   system "git branch #{deploy_branch} origin/#{deploy_branch}"
+  system 'git checkout master'
   puts 'branch:'
   system 'git branch'
   puts '$ mv ../build .'
