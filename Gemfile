@@ -17,7 +17,8 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "master"
 gem "middleman-syntax"
 gem "middleman-minify-html"
-gem 'middleman-gh-pages'
+#gem 'middleman-gh-pages'
+#gem 'middleman-deploy', '~> 1.0'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

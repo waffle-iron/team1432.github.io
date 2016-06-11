@@ -3,10 +3,9 @@ set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
-BUILD_DIR=build
 
 function doCompile {
-  bundle exec rake publish && echo "Hello from planet Earth (actually the aliens at travis)"
+  ./compile.sh
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -23,23 +22,21 @@ SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-git clone $REPO $BUILD_DIR
-cd $BUILD_DIR
-pwd
-ls
-git checkout $SOURCE_BRANCH || git checkout --orphan $SOURCE_BRANCH
-#cd ..
+git clone $REPO out
+cd out
+git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+cd ..
 
 # Clean out existing contents
-#rm -rf $BUILD_DIR/**/* || exit 0
+rm -rf out/**/* || exit 0
 
-git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
 # Run our compile script
 doCompile
 
 # Now let's go have some fun with the cloned repo
-cd $BUILD_DIR
+cd out
+git config user.name "Travis CI"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
@@ -63,5 +60,4 @@ eval `ssh-agent -s`
 ssh-add deploy_key
 
 # Now that we're all set up, we can push.
-echo 'Uploading'
 git push $SSH_REPO $TARGET_BRANCH
