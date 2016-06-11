@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.3.1
 cache: bundler
-script: rake travis
+script: bash deploy.sh
 env:
   global:
   - ENCRYPTION_LABEL: "347d35156aa9"

@@ -5,7 +5,35 @@ SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
 
 function doCompile {
-  ./compile.sh
+  echo ENV['GH_TOKEN']
+  git pull origin source
+  echo 'building'
+  bundle exec middleman build
+  echo '$ mv build ../'
+  mv build ../
+  #echo 'commiting'
+  #git commit -am "travis built"
+  echo '$ pwd'
+  pwd
+  print 'listing branches'
+  git branch
+  print 'branching'
+  git branch $TARGET_BRANCH origin/$TARGET_BRANCH
+  git checkout master
+  echo 'branch:'
+  git branch
+  echo '$ rm -rf *'
+  rm -rf *
+  echo '$ mv ../build/* .'
+  mv ../build/* .
+  echo '$ ls -a'
+  ls -a
+  echo '$ git add -A && git commit -am "add build"' 
+  git add -A && git commit -am "add build"
+  
+  echo '$ git push origin source'
+  git push origin source
+
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
