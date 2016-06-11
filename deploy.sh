@@ -33,13 +33,13 @@ git checkout $SOURCE_BRANCH || git checkout --orphan $SOURCE_BRANCH
 # Clean out existing contents
 #rm -rf $BUILD_DIR/**/* || exit 0
 
+git config user.name "Travis CI"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
 # Run our compile script
 doCompile
 
 # Now let's go have some fun with the cloned repo
 cd $BUILD_DIR
-git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
