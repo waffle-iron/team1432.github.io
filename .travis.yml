@@ -1,0 +1,6 @@
+language: generic
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "347d35156aa9"
+  - COMMIT_AUTHOR_EMAIL: caleb.eby01@gmail.com
