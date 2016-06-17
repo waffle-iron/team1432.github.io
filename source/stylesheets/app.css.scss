@@ -90,12 +90,24 @@ main {
 pre > code{
   @extend %highlight;
 }
+article .summary {
+  font-style: italic;  
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+time {
+  margin-left: 10px;
+  @extend %chip;
+}
 
 ////////// POSTS ///////////
 .posts {
   @include media($desktop) {
     @include span-columns(8);
   }
+}
+.author {
+  @extend %action, %chip;
 }
 .posts > .post {
   @extend %card;
@@ -105,9 +117,6 @@ pre > code{
   }
   .summary {
     @extend %text;
-  }
-  .author {
-    @extend %action, %chip;
   }
   .readmore {
     @extend %action;

@@ -10,10 +10,8 @@ html
   body[itemscope itemtype="http://schema.org/WebPage"]
     header.page-header
       nav
-        ul
-          li
-            = link_to "Home", "/"
-          li = link_to "Blog", "/blog"
+        = link_to "Home", "/"
+        = link_to "Blog", "/blog"
     main[role="main"]
       = yield
     = javascript_include_tag :application

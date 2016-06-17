@@ -17,18 +17,18 @@ activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
 
 class CustomMarkdown < Redcarpet::Render::HTML
   def initialize(options={
-      fenced_code_blocks: true,
-      smartypants: true,
-      tables: true,
-      autolink: true,
-      with_toc_data: true,
-      no_intra_emphasis: true,
-      strikethrough: true,
-      lax_spacing: true,
-      quote: true,
-      footnotes: true,
-      underline: true
-    })
+    fenced_code_blocks: true,
+    smartypants: true,
+    tables: true,
+    autolink: true,
+    with_toc_data: true,
+    no_intra_emphasis: true,
+    strikethrough: true,
+    lax_spacing: true,
+    quote: true,
+    footnotes: true,
+    underline: true
+  })
     super options.merge(
       with_toc_data: true,
     )
@@ -51,8 +51,8 @@ class CustomMarkdown < Redcarpet::Render::HTML
     rendered_doc = custom_markdown(rendered_doc, markdowner)
   end
   def custom_markdown(document, renderer)
-    document.gsub(/^(.+?)\nREADMORE/) do
-      "<div class='summary'>#{$1}</div>"
+    document.gsub(/^(.+?)\n+READMORE/) do
+      "<div class='summary'>#{$1}</div>\nREADMORE\n"
     end
   end
   include Rouge::Plugins::Redcarpet
@@ -113,7 +113,7 @@ end
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  #activate :livereload
 end
 
 # Methods defined in the helpers block are available in templates
@@ -133,8 +133,8 @@ helpers do
   def author_tag(author)
     return\
       "<a href='/authors/#{author}' class='author'>
-        #{image_tag '/images/authors/' + data.authors[author].photo}
-        #{data.authors[author].name}
+      #{image_tag '/images/authors/' + data.authors[author].photo}
+      #{data.authors[author].name}
       </a>"
   end
   def article_card(article)
@@ -145,9 +145,9 @@ helpers do
     return\
       "<div class='post'>
         <h2 class='title'>#{article.title}</h2>
-        #{author_tags}
+      #{author_tags}
         <p class='summary'>#{strip_tags article.summary}</p>
-        #{link_to "Read more...", article, class: "flat button readmore"}
+      #{link_to "Read more...", article, class: "flat button readmore"}
       </div>"
   end
 end
