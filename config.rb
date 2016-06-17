@@ -51,7 +51,7 @@ class CustomMarkdown < Redcarpet::Render::HTML
     rendered_doc = custom_markdown(rendered_doc, markdowner)
   end
   def custom_markdown(document, renderer)
-    document.gsub(/(.*?)READMORE/) do
+    document.gsub(/^(.+?)\nREADMORE/) do
       "<div class='summary'>#{$1}</div>"
     end
   end
