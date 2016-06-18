@@ -10,6 +10,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 activate :asset_hash
+set :relative_links, true
 activate :sprockets
 activate :directory_indexes
 #activate :gzip

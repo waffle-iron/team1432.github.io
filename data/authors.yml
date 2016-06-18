@@ -9,3 +9,7 @@ cody:
   description: Cody is our new Programming Mentor, a PSU grad in the IT field.
     He's transitioning our team over the using Java as our programming language
     and we're really looking forward to the change. 
+alex:
+  name: Alex Couchot
+  photo: none.nil
+  description: Alex does building.
