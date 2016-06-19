@@ -1,5 +1,4 @@
 %header {
-  height: 56px;
   top: 0;
   text-align: justify;
   @include elevation(4);
@@ -16,7 +15,6 @@
   a {
     text-decoration: none;
     display: inline-block;
-    line-height: 56px;
     padding: 0 15px;
     height: 100%;
   }
