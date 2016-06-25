@@ -1,5 +1,5 @@
 prose:
-  media: 'source/images/blog'
+  media: '/source/images/blog'
   rooturl: 'source/posts'
   siteurl: 'https://team1432.github.io'
   metadata:
@@ -21,7 +21,7 @@ prose:
           alterable: true
           options:
             - name: 'Tech'
-              value: 'tech'
+              value: 'Tech'
       - name: "date"
         field:
           element: "text"
