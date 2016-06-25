@@ -1,7 +1,6 @@
 prose:
   media: 'source/images/blog'
   rooturl: 'source/posts'
-  siteurl: 'https://team1432.github.io'
   metadata:
     source/posts:
       - name: "title"
