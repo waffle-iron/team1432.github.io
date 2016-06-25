@@ -200,7 +200,7 @@ body.root {
     position: absolute;
     left: 50%;
     top: 50%;
-    @include transform(translate(-50%, -50%));
+    transform: translate(-50%, -50%);
     min-width: 600px;
     max-width: 100%; 
     height: auto !important;
@@ -213,5 +213,6 @@ body.root {
     overflow: hidden;
     max-width: 2448px;
     height: calc(100vh - 100px);
+    transition: transform 1s
   }
 }
