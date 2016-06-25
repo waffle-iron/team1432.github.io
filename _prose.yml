@@ -22,3 +22,8 @@ prose:
           options:
             - name: 'Tech'
               value: 'tech'
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: CURRENT_DATETIME
