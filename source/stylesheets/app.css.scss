@@ -116,7 +116,7 @@ main {
 pre > code{
   @extend %highlight;
 }
-blog-page article {
+.blog-page article {
   .summary { 
     font-style: italic;  
     margin-top: 30px;
