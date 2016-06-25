@@ -55,7 +55,7 @@ class CustomMarkdown < Redcarpet::Render::HTML
     document.gsub(/^(.+?)\n+READMORE/) do
       "<div class='summary'>#{$1}</div>\nREADMORE\n"
     end
-    document.gsub(/{{site\.baseurl}}/, '')
+    document.gsub(/{{site\.baseurl}}\/source/, '')
   end
   include Rouge::Plugins::Redcarpet
 end
