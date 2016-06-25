@@ -121,6 +121,9 @@ article .summary {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+article img {
+  max-width: 100%;
+}
 time {
   margin-left: 10px;
   @extend %chip;
