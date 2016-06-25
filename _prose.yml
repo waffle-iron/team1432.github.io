@@ -1,6 +1,7 @@
 prose:
   media: 'source/images/blog'
   rooturl: 'source/posts'
+  siteurl: 'https://team1432.github.io'
   metadata:
     source/posts:
       - name: "title"
@@ -8,18 +9,16 @@ prose:
           element: "text"
           label: "Title"
           value: ""
-      - name: date
-        field:
-          element: "text"
-          label: "Date"
-          value: CURRENT_DATETIME
       - name: "author"
         field:
           element: "text"
           label: "Author"
           value: ""
       - name: "tags"
-          field:
+        field:
           element: "multiselect"
           label: "Tags"
           alterable: true
+          options:
+            - name: 'Tech'
+              value: 'tech'
