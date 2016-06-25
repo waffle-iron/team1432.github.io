@@ -2,7 +2,7 @@
 title: About Caleb
 date: 2016/06/17
 author: Caleb Eby
-published: true
+published: false
 ---
 
 Who is Caleb, and what does he do?
