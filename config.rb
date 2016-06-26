@@ -17,8 +17,6 @@ activate :automatic_image_sizes
 activate :automatic_alt_tags
 #activate :gzip
 activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
-::Rack::Mime::MIME_TYPES['.md'] = 'text/html'
-::Rack::Mime::MIME_TYPES['.html'] = 'text/html'
 ::Rack::Mime::MIME_TYPES[''] = 'text/html'
 ::Rack::Mime::MIME_TYPES['.svg'] = 'image/svg+xml'
 
@@ -59,10 +57,7 @@ class CustomMarkdown < Redcarpet::Render::HTML
     rendered_doc = custom_markdown(rendered_doc, markdowner)
   end
   def custom_markdown(document, renderer)
-    document.gsub(/^(.+?)\n+READMORE/) do
-      "<div class='summary'>#{$1}</div>\nREADMORE\n"
-    end
-    document.gsub(/{{site\.baseurl}}\/source/, '')
+    document.gsub!(/^([\s\S]+)READMORE/) { "<div class='summary'>#{$1.to_s}</div>\nREADMORE\n"}
   end
   include Rouge::Plugins::Redcarpet
 end
