@@ -5,7 +5,9 @@ cache:
   bundler: true
   apt: true 
 script: bash deploy.sh
-before-install: rvm list
+before-install:
+  - rvm list
+  - sudo apt-get -y install jpegoptim optipng
 env:
   global:
     - ENCRYPTION_LABEL: "347d35156aa9"

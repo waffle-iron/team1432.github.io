@@ -18,6 +18,7 @@ gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "mas
 gem "middleman-syntax"
 gem "middleman-minify-html"
 gem 'middleman-autoprefixer'
+
 #gem 'middleman-gh-pages'
 #gem 'middleman-deploy', '~> 1.0'
 

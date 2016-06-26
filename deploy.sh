@@ -9,6 +9,8 @@ function doCompile {
   git pull
   echo 'building'
   git checkout $SOURCE_BRANCH
+  jpegoptim **/*.jpg
+  optipng **/*.png
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
