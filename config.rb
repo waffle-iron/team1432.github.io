@@ -20,6 +20,7 @@ activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
 ::Rack::Mime::MIME_TYPES['.md'] = 'text/html'
 ::Rack::Mime::MIME_TYPES['.html'] = 'text/html'
 ::Rack::Mime::MIME_TYPES[''] = 'text/html'
+::Rack::Mime::MIME_TYPES['.svg'] = 'image/svg+xml'
 
 
 class CustomMarkdown < Redcarpet::Render::HTML
