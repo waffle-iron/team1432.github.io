@@ -13,8 +13,14 @@ activate :asset_hash
 activate :sprockets
 activate :directory_indexes
 activate :autoprefixer
+activate :automatic_image_sizes
+activate :automatic_alt_tags
 #activate :gzip
 activate :syntax, :css_class => 'syntax-highlight', :line_numbers => false
+::Rack::Mime::MIME_TYPES['.md'] = 'text/html'
+::Rack::Mime::MIME_TYPES['.html'] = 'text/html'
+::Rack::Mime::MIME_TYPES[''] = 'text/html'
+
 
 class CustomMarkdown < Redcarpet::Render::HTML
   def initialize(options={
@@ -87,13 +93,14 @@ set :markdown,
 ###
 
 activate :blog do |blog|
+  set :trailing_slash, false
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
   blog.layout = "article_layout"
 
-  blog.permalink = "/blog/{title}.html"
+  blog.permalink = "/blog/{title}/index.html"
   # Matcher for blog source files
-  blog.sources = "/posts/{year}-{month}-{day}-{title}.html"
+  blog.sources = "/posts/{year}-{month}-{day}-{title}"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -110,9 +117,13 @@ activate :blog do |blog|
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
+#  blog.articles.each do |article|
+#    page article.url, content_type: 'text/html'
+#  end
 end
 
 page "/feed.xml", layout: false
+
 # Reload the browser automatically whenever files change
 configure :development do
   #activate :livereload
