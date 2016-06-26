@@ -9,8 +9,8 @@ function doCompile {
   git pull
   echo 'building'
   git checkout $SOURCE_BRANCH
-  find . -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
-  find . -iname '*.png' -print0 | xargs -0 optipng
+  find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
+  find source -iname '*.png' -print0 | xargs -0 optipng
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
