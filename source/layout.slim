@@ -1,7 +1,6 @@
 doctype html
 html
   head
-    = stylesheet_link_tag :app
     meta[charset="utf-8"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
@@ -43,4 +42,5 @@ html
         = link_to "Blog", "/blog"
     main[role="main"]
       = yield
+    = stylesheet_link_tag :app
 //    = javascript_include_tag :application
