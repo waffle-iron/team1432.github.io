@@ -4,3 +4,8 @@ published: false
 title: Prototype Launcher Plans
 author: Caleb Eby
 ---
+In the next few weeks, we plan to build a prototype launcher to test how changing the speed of upper and lower launcher wheels affects the launch angle of the ball:
+
+![prototype launcher drawing]({{site.baseurl}}/source/images/blog/prototype-launcher-drawing.png)
+
+Ideally, the change in launch wheel speed will change the ball angle enough so that we don't have to rotate the launcher mechanism vertically to change the launch angle significantly. By not changing
