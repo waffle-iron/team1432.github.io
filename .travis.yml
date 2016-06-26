@@ -6,9 +6,13 @@ cache:
   apt: true 
 script: bash deploy.sh
 before-install:
-  - echo 'before installing'
-  - sudo apt-get -y install jpegoptim libjpeg-progs optipng
   - rvm list
+addons:
+  apt:
+    packages:
+      - jpegoptim 
+      - libjpeg-progs
+      - optipng
 env:
   global:
     - ENCRYPTION_LABEL: "347d35156aa9"
