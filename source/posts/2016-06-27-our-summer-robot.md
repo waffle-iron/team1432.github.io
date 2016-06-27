@@ -13,6 +13,7 @@ READMORE
 ### Programming
 - Create a fast, reliable, and accurate aiming system
 - Test out [RobotPy](https://robotpy.github.io/)
+
 ### Design/Build
 - Build a shooter, which we haven't done in a while
 - Build an intake mechanism
