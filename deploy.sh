@@ -10,21 +10,21 @@ function doCompile {
   echo 'building'
   git checkout $SOURCE_BRANCH
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
-  find source -iname '*.png' -print0 | xargs -0 optipng
+  find source -iname '*.png' -print0 | xargs -0 optipng -quiet
   spelling_errors=""
-  for file in $(find . -name '*.md'); do
-    errors=$(cat $file | aspell list)
-    while read -r line; do
-      if [ ! $(grep -Fxqi "$line" spelling.txt) ]; then
-        spelling_errors=$(("$spelling_errors$line"))
-      fi
-    done <<< "$errors"
-    if [ ! $spelling_errors -eq ""]; then
-      echo "spelling errors in "$file
-      echo "$spelling_errors"
-      #exit 1
-    fi
-  done
+  #for file in $(find . -name '*.md'); do
+  #  errors=$(cat $file | aspell list)
+  #  while read -r line; do
+  #    if [ ! $(grep -Fxqi "$line" spelling.txt) ]; then
+  #      spelling_errors=$(("$spelling_errors$line"))
+  #    fi
+  #  done <<< "$errors"
+  #  if [ ! $spelling_errors -eq ""]; then
+  #    echo "spelling errors in "$file
+  #    echo "$spelling_errors"
+  #    #exit 1
+  #  fi
+  #done
   tree
   bundle exec middleman build
   echo '$ mv build ../'
