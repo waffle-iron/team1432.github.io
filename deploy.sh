@@ -22,8 +22,6 @@ function doCompile {
     if [ ! $spelling_errors -eq ""]; then
       echo "$spelling_errors"
       exit 1
-    else
-      exit 0
     fi
   done
   bundle exec middleman build
