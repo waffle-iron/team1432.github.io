@@ -9,18 +9,16 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem "middleman", "4.1.7"
+gem "middleman"
 gem "middleman-blog"
 gem "slim"
-gem "middleman-livereload", "~> 3.4.3"
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+#gem "middleman-livereload"
+gem 'redcarpet', '~> 3.3'
 gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "master"
 gem "middleman-syntax"
 gem "middleman-minify-html"
 gem 'middleman-autoprefixer'
-
-#gem 'middleman-gh-pages'
-#gem 'middleman-deploy', '~> 1.0'
+gem 'mdspell'
 
 # For feed.xml.builder
-gem "builder", "~> 3.0"
+gem "builder"

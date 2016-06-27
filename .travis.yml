@@ -13,6 +13,7 @@ addons:
       - jpegoptim 
       - libjpeg-progs
       - optipng
+      - aspell
 env:
   global:
     - ENCRYPTION_LABEL: "347d35156aa9"

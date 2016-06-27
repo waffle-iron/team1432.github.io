@@ -11,11 +11,10 @@ function doCompile {
   git checkout $SOURCE_BRANCH
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
   find source -iname '*.png' -print0 | xargs -0 optipng
+  mdspell .
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
-  #echo 'commiting'
-  #git commit -am "travis built"
   echo '$ pwd'
   pwd
   echo 'listing branches'
