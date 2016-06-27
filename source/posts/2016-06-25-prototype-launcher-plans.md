@@ -17,4 +17,4 @@ Ideally, the change in launch wheel speed will change the ball angle enough so t
 
 This will be our first project we will CAD with [Autodesk Inventor](http://www.autodesk.com/products/inventor/overview). In the future, we hope to CAD all of our robot designs.
 
-After this prototype, we hope to build a robot with a rotating turret. thees si a speling erroor.
+After this prototype, we hope to build a robot with a rotating turret.
