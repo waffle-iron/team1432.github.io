@@ -25,6 +25,7 @@ function doCompile {
       exit 1
     fi
   done
+  tree
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../

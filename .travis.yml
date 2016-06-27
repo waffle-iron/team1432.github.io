@@ -15,6 +15,7 @@ addons:
       - optipng
       - aspell
       - aspell-en
+      - tree
 env:
   global:
     - ENCRYPTION_LABEL: "347d35156aa9"
