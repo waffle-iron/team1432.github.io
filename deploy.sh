@@ -12,7 +12,7 @@ function doCompile {
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
   find source -iname '*.png' -print0 | xargs -0 optipng
   spelling_errors=""
-  for file in *.md; do
+  for file in $(find . -name '*.md'); do
     errors=$(cat $file | aspell list)
     while read -r line; do
       if [ ! grep -Fxqi "$line" spelling.txt]; then
