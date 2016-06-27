@@ -9,22 +9,9 @@ function doCompile {
   git pull
   echo 'building'
   git checkout $SOURCE_BRANCH
+  bash spelling.sh
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
   find source -iname '*.png' -print0 | xargs -0 optipng -quiet
-  spelling_errors=""
-  #for file in $(find . -name '*.md'); do
-  #  errors=$(cat $file | aspell list)
-  #  while read -r line; do
-  #    if [ ! $(grep -Fxqi "$line" spelling.txt) ]; then
-  #      spelling_errors=$(("$spelling_errors$line"))
-  #    fi
-  #  done <<< "$errors"
-  #  if [ ! $spelling_errors -eq ""]; then
-  #    echo "spelling errors in "$file
-  #    echo "$spelling_errors"
-  #    #exit 1
-  #  fi
-  #done
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../
