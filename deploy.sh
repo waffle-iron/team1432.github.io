@@ -16,7 +16,7 @@ function doCompile {
     errors=$(cat $file | aspell list)
     while read -r line; do
       if [ ! $(grep -Fxqi "$line" spelling.txt) ]; then
-        spelling_errors=$(("$spelling_errors"+$line))
+        spelling_errors=$(("$spelling_errors$line"))
       fi
     done <<< "$errors"
     if [ ! $spelling_errors -eq ""]; then
