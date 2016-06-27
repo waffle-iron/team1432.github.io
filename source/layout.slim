@@ -2,7 +2,7 @@ doctype html
 html
   head
     css:
-      header,main,footer{display:none}#startup-logo{position:fixed;display:block;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;height:500px;}
+      header,main,footer{display:none;opacity:0}#startup-logo{position:fixed;display:block;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;height:500px;opacity:1;transition:all 1s ease-in;z-index:30;max-width:80%;}
     link as="style" href="/stylesheets/app.css" onload="this.rel='stylesheet'" rel="preload" /
     noscript
       link href="/stylesheets/app.css" rel="stylesheet" /
