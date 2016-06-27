@@ -1,5 +1,5 @@
 spelling_errors=""
-for file in $(find . -name '*.md'); do
+for file in $(find ./source/posts/ -name '*.md'); do
   errors=$(cat $file | aspell list)
   while read -r line; do
     if ! grep -Fxqi "$line" spelling.txt; then
