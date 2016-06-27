@@ -11,7 +11,21 @@ function doCompile {
   git checkout $SOURCE_BRANCH
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
   find source -iname '*.png' -print0 | xargs -0 optipng
-  mdspell .
+  spelling_errors=""
+  for file in *.md; do
+    errors=$(cat $file | aspell list)
+    while read -r line; do
+      if [ ! grep -Fxqi "$line" spelling.txt]; then
+        spelling_errors=$(("$spelling_errors"+$line))
+      fi
+    done <<< "$errors"
+    if [ ! $spelling_errors -eq ""]; then
+      echo "$spelling_errors"
+      exit 1
+    else
+      exit 0
+    fi
+  done
   bundle exec middleman build
   echo '$ mv build ../'
   mv build ../

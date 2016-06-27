@@ -18,7 +18,6 @@ gem "middleman-sprockets", github: "middleman/middleman-sprockets", branch: "mas
 gem "middleman-syntax"
 gem "middleman-minify-html"
 gem 'middleman-autoprefixer'
-gem 'mdspell'
 
 # For feed.xml.builder
 gem "builder"
