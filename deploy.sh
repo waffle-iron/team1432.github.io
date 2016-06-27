@@ -93,6 +93,7 @@ fi
 # The delta will show diffs between new and old versions.
 echo '$ git add .'
 git add .
+tree
 echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
