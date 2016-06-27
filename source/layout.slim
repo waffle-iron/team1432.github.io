@@ -2,7 +2,7 @@ doctype html
 html
   head
     css:
-      header,main,footer{display:none;opacity:0}#startup-logo{position:fixed;display:block;left:50%;top:50%;transform:translate(-50%,-50%);width:500px;height:500px;opacity:1;transition:all 1s ease-in;z-index:30;max-width:80%;}
+      body{padding:0;margin:0;width:100%;height:100%;}header,main,footer{display:none}#startup-logo{position:fixed;width:100%;height:100%;background-color:#293D6E;opacity:1;transition:all 1s ease-in;z-index:30}
     link as="style" href="/stylesheets/app.css" onload="this.rel='stylesheet'" rel="preload" /
     noscript
       link href="/stylesheets/app.css" rel="stylesheet" /
@@ -40,7 +40,8 @@ html
   - else
     - body_class = current_page.url.gsub(/\/([^\/]+)\/.*/, '\1')
   body[itemscope itemtype="http://schema.org/WebPage" class="#{body_class}"]
-    = image_tag "logo/logo.svg", id: 'startup-logo'
+    //= image_tag "logo/logo.svg", id: 'startup-logo'
+    #startup-logo
     header.page-header
       a#header-logo href='/'
         = image_tag "logo/logo.svg" 
