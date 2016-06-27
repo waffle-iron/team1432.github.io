@@ -15,7 +15,7 @@ function doCompile {
   for file in $(find . -name '*.md'); do
     errors=$(cat $file | aspell list)
     while read -r line; do
-      if [ ! grep -Fxqi "$line" spelling.txt]; then
+      if [ ! $(grep -Fxqi "$line" spelling.txt) ]; then
         spelling_errors=$(("$spelling_errors"+$line))
       fi
     done <<< "$errors"
