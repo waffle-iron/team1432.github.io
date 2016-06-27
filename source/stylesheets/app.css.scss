@@ -92,9 +92,10 @@ header.page-header {
     a {
       padding: 0 20px;
       color: $white;
-      &.active, &:hover {
+      &:active, &:hover, &:focus {
         //background-color: lighten($beaver-blue, 10%);
         background-color: $beaver-gold;
+        outline: none;
       }
     }
   }
