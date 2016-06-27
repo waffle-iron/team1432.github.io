@@ -22,7 +22,7 @@ function doCompile {
     if [ ! $spelling_errors -eq ""]; then
       echo "spelling errors in "$file
       echo "$spelling_errors"
-      exit 1
+      #exit 1
     fi
   done
   tree
@@ -89,6 +89,7 @@ if [ -z `git diff --exit-code` ]; then
     exit 0
 fi
 
+rm -rf vendor
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 echo '$ git add .'
