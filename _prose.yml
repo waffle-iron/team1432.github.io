@@ -10,7 +10,7 @@ prose:
           value: ""
       - name: "author"
         field:
-          element: "multiselect"
+          element: "select"
           label: "Author"
           alterable: false
           options:
