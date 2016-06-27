@@ -20,6 +20,7 @@ function doCompile {
       fi
     done <<< "$errors"
     if [ ! $spelling_errors -eq ""]; then
+      echo "spelling errors in "$file
       echo "$spelling_errors"
       exit 1
     fi
