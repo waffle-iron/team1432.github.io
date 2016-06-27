@@ -184,8 +184,10 @@ body.root {
     margin: 0;
   }
   .card {
+    max-width: 800px;
     @extend %card;
-    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
     h2 {
       @extend %title;
     }
@@ -219,5 +221,14 @@ body.root {
     max-width: 2448px;
     height: calc(100vh - 100px);
     transition: transform 1s
+  }
+  img#robot-photo {
+    width: 100%;
+    max-width: 800px;
+    @include elevation(2);
+    border-radius: 2px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
   }
 }
