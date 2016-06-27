@@ -10,9 +10,16 @@ prose:
           value: ""
       - name: "author"
         field:
-          element: "text"
+          element: "multiselect"
           label: "Author"
-          value: ""
+          alterable: false
+          options:
+            - name: 'Caleb Eby'
+              value: 'Caleb Eby'
+            - name: 'Alan Lohkamp'
+              value: 'Alan Lohkamp'
+            - name: 'Alex Couchot'
+              value: 'Alex Couchot'
       - name: "tags"
         field:
           element: "multiselect"
