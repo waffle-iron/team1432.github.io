@@ -5,30 +5,30 @@ SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
 
 function doCompile {
-  echo ENV['GH_TOKEN']
+  #echo ENV['GH_TOKEN']
   git pull
-  echo 'building'
+  #echo 'building'
   git checkout $SOURCE_BRANCH
   bash spelling.sh
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
   find source -iname '*.png' -print0 | xargs -0 optipng -quiet
   bundle exec middleman build
-  echo '$ mv build ../'
+  #echo '$ mv build ../'
   mv build ../
-  echo '$ pwd'
+  #echo '$ pwd'
   pwd
-  echo 'listing branches'
+  #echo 'listing branches'
   git branch
-  echo 'branching'
+  #echo 'branching'
   git pull
   git checkout -b $TARGET_BRANCH
-  echo 'branch:'
+  #echo 'branch:'
   git branch
-  echo '$ rm -rf *'
+  #echo '$ rm -rf *'
   rm -rf *
-  echo '$ mv ../build/* .'
+  #echo '$ mv ../build/* .'
   mv ../build/* .
-  echo '$ ls -a'
+  #echo '$ ls -a'
   ls -a
   #echo '$ git add -A && git commit -am "add build"' 
   #git add -A && git commit -am "add build"
@@ -38,7 +38,7 @@ function doCompile {
 
 }
 
-echo $TRAVIS_BRANCH
+#echo $TRAVIS_BRANCH
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
@@ -78,10 +78,10 @@ fi
 rm -rf vendor
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-echo '$ git add .'
+#echo '$ git add .'
 git add .
-tree
-echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
+#tree
+#echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
@@ -93,6 +93,6 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 # Now that we're all set up, we can push.
 #echo $ git push $SSH_REPO $TARGET_BRANCH
 #git push $SSH_REPO $TARGET_BRANCH
-echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
+#echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
