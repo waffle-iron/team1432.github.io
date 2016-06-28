@@ -98,3 +98,5 @@ git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"
 wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
 echo '$ pwd'
 pwd
+echo '$ tree'
+tree
