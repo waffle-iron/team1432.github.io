@@ -102,3 +102,13 @@ echo '$ tree'
 tree
 echo '$ git branch'
 git branch
+
+echo '$ git checkout source'
+git checkout source
+
+echo '$ pwd'
+pwd
+echo '$ tree'
+tree
+echo '$ git branch'
+git branch
