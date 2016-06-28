@@ -100,3 +100,5 @@ echo '$ pwd'
 pwd
 echo '$ tree'
 tree
+echo '$ git branch'
+git branch
