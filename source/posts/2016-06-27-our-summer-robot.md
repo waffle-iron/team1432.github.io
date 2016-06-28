@@ -17,4 +17,4 @@ READMORE
 ### Design/Build
 - Build a shooter, which we haven't done in a while
 - Build an intake mechanism
-- Use [Autodesk Inventor](http://www.autodesk.com/products/inventor/overview) to design before building
+- Use [Autodesk Inventor](http://www.autodesk.com/products/inventor/overview) to design the robot before building
