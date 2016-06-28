@@ -20,3 +20,5 @@ That's it!
   ![Save Button](https://github.com/team1432/team1432.github.io/raw/source/source/images/README/save.png)
 
 4. Click **Commit**
+5. Go to **[Travis CI](https://travis-ci.org/team1432/team1432.github.io)**
+6. Wait until it goes **green** or **red**. If it goes green, it passed. If it goes red, it means there was an error. Scroll through the log to try to figure out what went wrong. It **will fail** if there are spelling errors.
