@@ -103,10 +103,10 @@ tree
 echo '$ git branch'
 git branch
 
-echo '$ git pull'
-git pull
 echo '$ git checkout source'
 git checkout source
+echo '$ git pull origin source'
+git pull origin source
 
 echo '$ pwd'
 pwd
