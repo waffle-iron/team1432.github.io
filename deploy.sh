@@ -8,6 +8,7 @@ function doCompile {
   #echo ENV['GH_TOKEN']
   git pull
   #echo 'building'
+  git branch
   git checkout $SOURCE_BRANCH
   bash spelling.sh
   find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
