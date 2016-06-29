@@ -41,6 +41,7 @@ function doCompile {
 }
 echo '$ ls -A'
 ls -A
+cp Gemfile Gemfile.lock ../
 #echo $TRAVIS_BRANCH
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
@@ -122,5 +123,6 @@ pwd
 #echo '$ git branch'
 #git branch
 
+cp ../Gemfile ../Gemfile.lock .
 echo '$ ls -A'
 ls -A
