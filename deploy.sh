@@ -81,7 +81,6 @@ fi
 
 echo '$ ls -A'
 ls -A
-mv vendor ../
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 echo '$ git add .'
@@ -103,7 +102,6 @@ git commit --no-status -m "Deploy to GitHub Pages: ${SHA}"
 #echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
-mv ../vendor .
 echo '$ pwd'
 pwd
 #echo '$ tree'
