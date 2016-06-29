@@ -5,8 +5,6 @@ cache:
   bundler: true
   apt: true 
 script: bash deploy.sh
-before-install:
-  - rvm list
 addons:
   apt:
     packages:
