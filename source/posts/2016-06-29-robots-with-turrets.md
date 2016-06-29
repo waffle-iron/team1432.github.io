@@ -4,6 +4,8 @@ date: '2016-06-29 10:54 -0700'
 published: false
 title: Robots with Turrets
 ---
+This is a curated list of robots with rotating turrets from the [2016 FIRST Stronghold Season]()
+
 ## Dropshot by the [Cheesy Poofs](https://www.team254.com/)
 ![Dropshot](https://media.team254.com/2016/03/86bb0776-2016.jpg)
 
