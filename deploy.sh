@@ -52,8 +52,8 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
-pwd
-tree
+#pwd
+#tree
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
 git clone $REPO out
@@ -101,8 +101,8 @@ git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"
 wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
 echo '$ pwd'
 pwd
-echo '$ tree'
-tree
+#echo '$ tree'
+#tree
 echo '$ git branch'
 git branch
 
