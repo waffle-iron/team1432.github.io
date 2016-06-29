@@ -19,12 +19,12 @@ READMORE
 ## Nautalis by the [BadgerBOTS](http://www.badgerbots.org/)
 ![Nautalis](http://i.picresize.com/images/2016/05/13/4cJU.jpg)
 - [Chief Delphi with technical details](http://www.chiefdelphi.com/forums/showthread.php?p=1550594)
-- [The Blue Alliance with scoring infomation](http://www.thebluealliance.com/team/1306)
+- [The Blue Alliance with scoring infomation](http://www.thebluealliance.com/team/1306/2016)
 
 ## Invader by [Team THRUST](http://huntingtonrobotics.org/)
 ![Invader](http://www.chiefdelphi.com/media/img/829/82907429b405d9c889f149cd69144231_m.jpg)
 
-- [The Blue Alliance](http://www.thebluealliance.com/team/1501)
+- [The Blue Alliance](http://www.thebluealliance.com/team/1501/2016)
 - [YouTube](https://www.youtube.com/watch?v=ahPHh8D42fc)
 - [Chief Delphi](http://www.chiefdelphi.com/media/photos/43187)
 
