@@ -114,10 +114,12 @@ git branch
 #echo '$ git pull origin source'
 #git pull origin source
 
-#echo '$ pwd'
-#pwd
+echo '$ pwd'
+pwd
 #echo '$ tree'
 #tree
 #echo '$ git branch'
 #git branch
 
+echo '$ ls -A'
+ls -A
