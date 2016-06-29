@@ -123,6 +123,6 @@ pwd
 #echo '$ git branch'
 #git branch
 
-cp ../.bundle ../Gemfile ../Gemfile.lock .
+cp -r ../.bundle ../Gemfile ../Gemfile.lock .
 echo '$ ls -A'
 ls -A
