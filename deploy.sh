@@ -88,6 +88,7 @@ git add .
 #echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
+
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 #ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 #ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
