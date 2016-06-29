@@ -39,7 +39,8 @@ function doCompile {
   #git push origin master
 
 }
-
+echo '$ ls -A'
+ls -A
 #echo $TRAVIS_BRANCH
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
