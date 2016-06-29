@@ -4,21 +4,22 @@ date: '2016-06-29 10:54 -0700'
 published: false
 title: Robots with Turrets
 ---
-This is a curated list of robots with rotating turrets from the [2016 FIRST Stronghold Season](https://en.wikipedia.org/wiki/FIRST_Stronghold)
+This is a curated list of robots with rotating turrets from the [2016 FIRST Stronghold Season](https://en.wikipedia.org/wiki/FIRST_Stronghold). We are studying these robots for our summer turret robot.
+
+READMORE
 
 ## Dropshot by the [Cheesy Poofs](https://www.team254.com/)
 ![Dropshot](https://media.team254.com/2016/03/86bb0776-2016.jpg)
-
 - [Chief Delphi](http://www.chiefdelphi.com/forums/showthread.php?p=1553795)
-- [YouTube](https://www.youtube.com/watch?v=EguhIdvBDMA)
-- [Website with technical details](https://www.team254.com/first/2016/)
-- [The Blue Alliance](http://www.thebluealliance.com/team/254)
+- [YouTube release video](https://www.youtube.com/watch?v=EguhIdvBDMA)
+- [Website with brief technical details](https://www.team254.com/first/2016/)
+- [Technical Binder with super-detailed information](https://media.team254.com/2016/05/97d107e6-technicalBinder2016.pdf)
+- [The Blue Alliance scoring information](http://www.thebluealliance.com/team/254/2016)
 
 ## Nautalis by the [BadgerBOTS](http://www.badgerbots.org/)
 ![Nautalis](http://i.picresize.com/images/2016/05/13/4cJU.jpg)
-
 - [Chief Delphi with technical details](http://www.chiefdelphi.com/forums/showthread.php?p=1550594)
-- [The Blue Alliance](http://www.thebluealliance.com/team/1306)
+- [The Blue Alliance with scoring infomation](http://www.thebluealliance.com/team/1306)
 
 ## Invader by [Team THRUST](http://huntingtonrobotics.org/)
 ![Invader](http://www.chiefdelphi.com/media/img/829/82907429b405d9c889f149cd69144231_m.jpg)
