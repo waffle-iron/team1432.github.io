@@ -82,10 +82,10 @@ fi
 rm -rf vendor
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-#echo '$ git add .'
+echo '$ git add .'
 git add .
 #tree
-#echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
+echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
 git commit --no-status -m "Deploy to GitHub Pages: ${SHA}"
 
 
