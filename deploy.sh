@@ -17,8 +17,6 @@ function doCompile {
 
   #echo '$ mv build ../'
   mv build ../
-  #echo '$ pwd'
-  pwd
   #echo 'listing branches'
   git branch
   #echo 'branching'
@@ -30,8 +28,6 @@ function doCompile {
   rm -rf *
   #echo '$ mv ../build/* .'
   mv ../build/* .
-  #echo '$ ls -a'
-  ls -a
   #echo '$ git add -A && git commit -am "add build"' 
   #git add -A && git commit -am "add build"
   
@@ -39,8 +35,6 @@ function doCompile {
   #git push origin master
 
 }
-echo '$ ls -A'
-ls -A
 cp -r vendor .bundle Gemfile Gemfile.lock ../
 #echo $TRAVIS_BRANCH
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
@@ -81,15 +75,13 @@ if [ -z `git diff --exit-code` ]; then
     exit 0
 fi
 
-echo '$ ls -A'
-ls -A
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 echo '$ git add .'
 git add .
 #tree
 echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
-git commit --no-status -m "Deploy to GitHub Pages: ${SHA}"
+git commit --quiet -m "Deploy to GitHub Pages: ${SHA}"
 
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
@@ -103,9 +95,7 @@ git commit --no-status -m "Deploy to GitHub Pages: ${SHA}"
 #git push $SSH_REPO $TARGET_BRANCH
 #echo git push --force --quiet "https://${GITHUB_TOKEN}@$github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
 git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" master:$TARGET_BRANCH
-wget feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
-echo '$ pwd'
-pwd
+wget -q feedburner.google.com/fb/a/pingSubmit\?bloglink\=http%3A%2F%2Ffeeds.feedburner.com%2Fteam1432 -O /dev/null
 #echo '$ tree'
 #tree
 echo '$ git branch'
@@ -116,13 +106,9 @@ git branch
 #echo '$ git pull origin source'
 #git pull origin source
 
-echo '$ pwd'
-pwd
 #echo '$ tree'
 #tree
 #echo '$ git branch'
 #git branch
 
 cp -r ../vendor ../.bundle ../Gemfile ../Gemfile.lock .
-echo '$ ls -A'
-ls -A
