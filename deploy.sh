@@ -86,7 +86,7 @@ rm -rf vendor
 git add .
 #tree
 #echo '$ git commit -m "Deploy to GitHub Pages: '${SHA}'"'
-git commit -m "Deploy to GitHub Pages: ${SHA}"
+git commit --no-status -m "Deploy to GitHub Pages: ${SHA}"
 
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
