@@ -4,7 +4,7 @@ date: '2016-06-29 10:54 -0700'
 published: false
 title: Robots with Turrets
 ---
-This is a curated list of robots with rotating turrets from the [2016 FIRST Stronghold Season](https://en.wikipedia.org/wiki/FIRST_Stronghold). We are studying these robots for our summer turret robot.
+This is a curated list of robots with rotating turrets from the 2016 FIRST Stronghold Season. We are studying these robots for our summer turret robot.
 
 READMORE
 
