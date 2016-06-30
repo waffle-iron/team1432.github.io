@@ -16,7 +16,7 @@ That's it!
 3. Edit the post content
 4. Edit the post information by clicking on the metadata button on the right:
 
-  ![Metadata Button](https://github.com/team1432/team1432.github.io/raw/source/images/README/metadata.png)
+  ![Metadata Button](https://github.com/team1432/team1432.github.io/raw/source/source/images/README/metadata.png)
 
 5. When you're done, click on the **save** button on the right:
 
