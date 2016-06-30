@@ -25,7 +25,7 @@ READMORE
 ![Invader](http://www.chiefdelphi.com/media/img/829/82907429b405d9c889f149cd69144231_m.jpg)
 
 - [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1501/2016)
-- [YouTube](https://www.youtube.com/watch?v=ahPHh8D42fc)
+- [YouTube Release Video](https://www.youtube.com/watch?v=ahPHh8D42fc)
 - [Chief Delphi](http://www.chiefdelphi.com/media/photos/43187)
 
 ## Nazaré by [Code Orange](http://teamcodeorange.com/)
