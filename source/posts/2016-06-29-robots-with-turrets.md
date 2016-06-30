@@ -76,7 +76,12 @@ READMORE
 - [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/4028/2016)
 - [YouTube Release Video](https://www.youtube.com/watch?v=BpUqCr3rDHo)
 
-## 900
+## Knight by [♞The Zebracorns♞](http://team900.org/)
+
+![Knight](https://i.imgur.com/R7UQ9Rmh.jpg)
+
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/900/2016)
+- [YouTube Release Video](https://www.youtube.com/watch?v=MH_oBHxuucw)
 
 ## 3386
 
