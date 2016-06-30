@@ -20,6 +20,8 @@ prose:
               value: 'Alan Lohkamp'
             - name: 'Alex Couchot'
               value: 'Alex Couchot'
+            - name: 'Cody Hanks'
+              value: 'Cody Hanks'
       - name: "tags"
         field:
           element: "multiselect"
