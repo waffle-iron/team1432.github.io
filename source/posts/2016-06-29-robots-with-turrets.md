@@ -87,10 +87,18 @@ READMORE
 
 ![Minotaur](http://i.imgur.com/YOgaKJh.png)
 
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/3386/2016)
+- [YouTube Release Video](https://www.youtube.com/watch?v=sEZKnE1kZTU)
+
+## Lion Robotics 6 by [Lion Robotics](http://www.lionrobotics.org/)
+![Lion Robotics 6](https://i.imgur.com/acPWMe8h.jpg)
+
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/2907/2016)
+
+## [UNNAMED] by [TAN(X)]()
+
+![UNNAMED](http://imgur.com/N5HjeUT)
+
 - 
-
-## 2907
-
-## 3003?
 
 ## 2848
