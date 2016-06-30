@@ -9,10 +9,7 @@ Time.zone = 'Pacific Time (US & Canada)'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-activate :asset_hash
-activate :sprockets
 activate :directory_indexes
-activate :autoprefixer
 activate :automatic_image_sizes
 activate :automatic_alt_tags
 #activate :gzip
@@ -114,9 +111,6 @@ activate :blog do |blog|
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
-#  blog.articles.each do |article|
-#    page article.url, content_type: 'text/html'
-#  end
 end
 
 page "/feed.xml", layout: false
@@ -170,5 +164,8 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :minify_html
+  activate :asset_hash
+  activate :sprockets
+  activate :autoprefixer
 end
 

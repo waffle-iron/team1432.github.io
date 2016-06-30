@@ -19,6 +19,7 @@ gem "middleman-syntax"
 gem "middleman-minify-html"
 gem 'middleman-autoprefixer'
 gem 'nokogiri'
+gem 'therubyracer'
 
 # For feed.xml.builder
 gem "builder"
