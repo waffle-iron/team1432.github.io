@@ -12,7 +12,7 @@ READMORE
 
 ### Programming
 - Create a fast, reliable, and accurate aiming system
-- Test out [RobotPy](https://robotpy.github.io/)
+- Test out [RobotPy](https://robotpy.github.io/), a Python port of the FRC Library
 
 ### Design/Build
 - Build a shooter, which we haven't done in a while
