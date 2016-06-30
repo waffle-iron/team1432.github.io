@@ -62,7 +62,7 @@ READMORE
 - [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1885/2016)
 
 ## Maelstrom by The Body Electric
-
+![Maelstrom](https://www.chiefdelphi.com/media/img/96c/96cd600c5286e862acac73d3b8a3b6b4_l.jpg)
 - [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1389/2016)
 - [Chief Delphi Discussion](http://www.chiefdelphi.com/forums/showthread.php?t=142805)
 - [YouTube Release Video](https://www.youtube.com/watch?v=ihBd2lH16Ck)
