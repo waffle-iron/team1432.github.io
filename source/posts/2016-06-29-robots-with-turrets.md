@@ -59,9 +59,13 @@ READMORE
 ![ILITE "X"](http://www.chiefdelphi.com/media/img/539/539e836518ef2875d1c95d4498497776_m.jpg)
 
 - [Chief Delphi](http://www.chiefdelphi.com/forums/showthread.php?t=145411)
-- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1885)
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1885/2016)
 
-## [1389](http://www.chiefdelphi.com/forums/showthread.php?t=142805)
+## Maelstrom by The Body Electric
+
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/1389/2016)
+- [Chief Delphi Discussion](http://www.chiefdelphi.com/forums/showthread.php?t=142805)
+- [YouTube Release Video](https://www.youtube.com/watch?v=ihBd2lH16Ck)
 
 ## 4028
 
