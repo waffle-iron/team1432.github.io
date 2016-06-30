@@ -68,9 +68,13 @@ READMORE
 - [Chief Delphi Discussion](http://www.chiefdelphi.com/forums/showthread.php?t=142805)
 - [YouTube Release Video](https://www.youtube.com/watch?v=ihBd2lH16Ck)
 
-## 4028
+## Sasha the Concolor (ft. Banshee) by [The Beak Sqaud](http://frc4028.com/)
 
-http://www.chiefdelphi.com/forums/showthread.php?t=147568&page=2
+![Sasha the Concolor (ft. Banshee)](https://i.imgur.com/SHY5Acoh.jpg)
+
+- [Information on their Website](http://www.beaksquad.org/newsite/our-robot/2016-2/)
+- [The Blue Alliance Scoring Information](http://www.thebluealliance.com/team/4028/2016)
+- [YouTube Release Video](https://www.youtube.com/watch?v=BpUqCr3rDHo)
 
 ## 900
 
