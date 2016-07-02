@@ -9,7 +9,9 @@ What we are working on over the next week
 
 READMORE
 
-We have been working on a prototype launcher to test how changing the speed of upper and lower launcher wheels affects the launch angle of the ball:
+We have been working on a prototype launcher to test how changing the speed of upper and lower launcher wheels affects the launch angle of the ball
+
+Image here
 
 Ideally, the change in launch wheel speed will change the ball angle enough so that we don't have to rotate the launcher mechanism vertically to change the launch angle significantly. By not needing a mechanism to rotate the shooter vertically, we can save space on future robots.
 
