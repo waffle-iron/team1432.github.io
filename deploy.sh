@@ -11,8 +11,8 @@ function doCompile {
   git branch
   git checkout $SOURCE_BRANCH
   bash spelling.sh
-  find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
-  find source -iname '*.png' -print0 | xargs -0 optipng -quiet
+  #find source -iname '*.jpg' -print0 | xargs -0 jpegoptim -m50
+  #find source -iname '*.png' -print0 | xargs -0 optipng -quiet
   bundle exec middleman build | grep -E '\b(create|delete|error|update)\b'
 
   #echo '$ mv build ../'
