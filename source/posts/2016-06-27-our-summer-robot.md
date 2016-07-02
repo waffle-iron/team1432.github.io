@@ -1,6 +1,5 @@
 ---
 author: Caleb Eby
-date: '2016-06-27 15:28 -0700'
 published: false
 title: Our Summer Robot
 ---

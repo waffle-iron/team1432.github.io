@@ -1,6 +1,5 @@
 ---
 author: Caleb Eby
-date: '2016-06-29 10:54 -0700'
 published: true
 title: Robots with Turrets
 ---

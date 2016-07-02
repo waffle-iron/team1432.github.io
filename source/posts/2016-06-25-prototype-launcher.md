@@ -1,5 +1,4 @@
 ---
-date: '2016-06-31 15:58 -0700'
 published: false
 title: Prototype Launcher
 author: Caleb Eby
