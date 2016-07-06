@@ -12,6 +12,18 @@
 
 That's it!
 
+## Create a Post
+
+1. Go to **[Trello](https://trello.com/b/iLpXk1W6/post-ideas)** to get a post idea
+2. Go to **[Prose.io](http://prose.io)** and click on **team1432.github.io**
+3. Click **`New Post`**
+4. Add a title
+5. Fill in the author and tags information
+
+  ![Metadata Button](https://github.com/team1432/team1432.github.io/raw/source/source/images/README/metadata.png)
+
+6. Follow the instructions for editing a post
+
 ## Editing a Post
 
 1. Go to **[Prose.io](http://prose.io)** and click on **team1432.github.io**
