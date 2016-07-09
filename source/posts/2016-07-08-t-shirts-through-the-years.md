@@ -14,4 +14,19 @@ In 2004 the team was started my Mr. Mahr, Franklin High School's metal shop inst
 In 2005, the game was called 'Triple Play.' Teams had to score 'tetras' on nine goals. We used the same T-shirt as the year before. We had about seven people on the team.
 
 ## 2006
-2006 
+2006's game was 'Aim High.' Robots had to score balls in round goals. Our robot proved to be too top-heavy to climb the ramp to the goal.
+
+## 2007
+Rack 'n Roll was 2007's game. Robots had to hang inflatable pool toys on an octagonal rack in the middle of the field. The pool toys could be arranged like in Tic-Tac-Toe to get additional points.
+
+# 2008
+In 2008, robots had to push 40" balls around an oval track. The game was called Overdrive.
+
+# 2009
+2009's game was called Lunacy. The field was covered in a smooth surface called 'Regolith,' and robots were required to have low-traction wheels, which led to robots not being very capable of slowing down and speeding up. Robots had to score in baskets attatched to other robots.
+
+# 2010
+In 2010, the game, Breakaway, was based on soccer. Robots drove across large bumps in the middle of the field, and shot soccer balls into goals.
+
+# 2011
+In 2011, 
