@@ -23,10 +23,10 @@ Rack 'n Roll was 2007's game. Robots had to hang inflatable pool toys on an octa
 In 2008, robots had to push 40" balls around an oval track. The game was called Overdrive.
 
 # 2009
-2009's game was called Lunacy. The field was covered in a smooth surface called 'Regolith,' and robots were required to have low-traction wheels, which led to robots not being very capable of slowing down and speeding up. Robots had to score in baskets attatched to other robots.
+2009's game was called Lunacy. The field was covered in a smooth surface called 'Regolith,' and robots were required to have low-traction wheels, which led to robots not being very capable of slowing down and speeding up. Robots had to score in baskets attached to other robots.
 
 # 2010
 In 2010, the game, Breakaway, was based on soccer. Robots drove across large bumps in the middle of the field, and shot soccer balls into goals.
 
 # 2011
-In 2011, 
+In 2011,
