@@ -66,4 +66,4 @@ That's it!
 
 6. Click **Commit**
 7. Go to **[Travis CI](https://travis-ci.org/team1432/team1432.github.io)**
-8. Wait until it goes **green** or **red**. If it goes green, it passed. If it goes red, it means there was an error. Scroll through the log to try to figure out what went wrong. It **will fail** if there are spelling errors.
+8. Wait until it goes **green** or **red**. If it goes green, it passed. If it goes red, it means there was an error. Scroll through the log to try to figure out what went wrong. It **will fail** if there are spelling errors. If you are *sure* that the word is spelled correctly, you can add it to the list on [Prose.io](http://prose.io/#team1432/team1432.github.io/edit/source/spelling.txt)
