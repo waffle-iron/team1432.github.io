@@ -1,6 +1,6 @@
 # FRC Team 1432 Blog Website: [team1432.github.io](https://team1432.github.io)
 [![Travis status](https://img.shields.io/travis/team1432/team1432.github.io/master.svg?maxAge=2592000&label=build%20status)](https://travis-ci.org/team1432/team1432.github.io)
-[![GitHub issues](http://tinyurl.com/z7299w6)](https://github.com/team1432/team1432.github.io/issues)
+[![GitHub issues](http://tinyurl.com/haqa4tj)](https://github.com/team1432/team1432.github.io/issues)
 
 
 ## Set Up
