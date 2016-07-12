@@ -15,6 +15,9 @@ That's it!
 ## Create a Post
 
 1. Go to **[Trello](https://trello.com/b/iLpXk1W6/post-ideas)** to get a post idea
+
+  > **NOTE:** You must be signed in
+  
 2. Go to **[Prose.io](http://prose.io)** and click on **team1432.github.io**
 3. Click **`New Post`**
 4. Add a title
