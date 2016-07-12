@@ -1,6 +1,7 @@
 # FRC Team 1432 Blog Website: [team1432.github.io](https://team1432.github.io)
-[![Travis branch](https://img.shields.io/travis/team1432/team1432.github.io/master.svg?maxAge=2592000)](https://travis-ci.org/team1432/team1432.github.io)
+[![Travis status](https://img.shields.io/travis/team1432/team1432.github.io/master.svg?maxAge=2592000)](https://travis-ci.org/team1432/team1432.github.io)
 [![GitHub issues](https://img.shields.io/github/issues/team1432/team1432.github.io.svg?maxAge=2592000)](https://github.com/team1432/team1432.github.io/issues)
+
 
 ## Set Up
 
