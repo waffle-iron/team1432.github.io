@@ -1,5 +1,6 @@
 # FRC Team 1432 Blog Website: [team1432.github.io](https://team1432.github.io)
 [![Travis status](http://bit.do/cbU56)](https://travis-ci.org/team1432/team1432.github.io)
+[![Trello post ideas](https://img.shields.io/badge/trello-post%20ideas-026aa7.svg)](https://trello.com/b/iLpXk1W6/posts)
 [![GitHub issues](http://tinyurl.com/haqa4tj)](https://github.com/team1432/team1432.github.io/issues)
 
 
