@@ -2,7 +2,9 @@
 [![Travis status](http://bit.do/cbU56)](https://travis-ci.org/team1432/team1432.github.io)
 [![Trello post ideas](http://bit.do/trelloideas)](https://trello.com/b/iLpXk1W6/posts)
 [![Prose.io editor](http://bit.do/prose)](http://prose.io/#team1432/team1432.github.io)
+[![Metal Beavers blog](http://tinyurl.com/hcluy2x)](https://team1432.github.io/blog)
 [![GitHub issues](http://tinyurl.com/haqa4tj)](https://github.com/team1432/team1432.github.io/issues)
+
 
 
 ## Set Up
